@@ -5,5 +5,4 @@ def generate_hashtag(s):
     return "#" + "".join(x.capitalize() for x in s.split())
 
 
-if __name__ == "__main__":
-    print(generate_hashtag("   Hello    World    "))
+assert generate_hashtag("   Hello    World    ") == "#HelloWorld"

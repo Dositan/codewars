@@ -32,5 +32,6 @@ class Calculator:
         return float(result)
 
 
-if __name__ == "__main__":
-    print(Calculator().evaluate("( ( ( ( 1 ) * 2 ) ) )"))
+calc = Calculator()
+assert calc.evaluate("123 * 2") == 246
+# assert calc.evaluate("( ( ( ( 1 ) * 2 ) ) )")

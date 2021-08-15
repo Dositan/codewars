@@ -58,3 +58,17 @@ class Warrior:
     @property
     def rank(self):
         return RANKS[self._experience // 1000]
+
+
+bruce_lee = Warrior()
+assert bruce_lee.level         == 1
+assert bruce_lee.experience    == 100
+assert bruce_lee.rank          == "Pushover"
+assert bruce_lee.achievements  == []
+assert bruce_lee.training(["Defeated Chuck Norris", 9000, 1]) == "Defeated Chuck Norris"
+assert bruce_lee.experience    == 9100
+assert bruce_lee.level         == 91
+assert bruce_lee.rank          == "Master"
+assert bruce_lee.battle(90)    == "A good fight"
+assert bruce_lee.experience    == 9105
+assert bruce_lee.achievements  == ["Defeated Chuck Norris"]

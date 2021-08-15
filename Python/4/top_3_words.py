@@ -7,5 +7,5 @@ def top_3_words(text: str):
     return [x for x, _ in ctr.most_common(3)]
 
 
-if __name__ == '__main__':
-    assert top_3_words("   '''   ") == []
+assert top_3_words("   '''   ") == []
+assert top_3_words("the dosek dosek dosek is is boy boy") == ["dosek", "is", "boy"]

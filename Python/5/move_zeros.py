@@ -6,5 +6,4 @@ def move_zeros(array):
     return new + zeros
 
 
-if __name__ == "__main__":
-    print(move_zeros([1, 0, 1, 2, 0, 1, 3]))
+assert move_zeros([1, 0, 1, 2, 0, 1, 3]) == [1, 1, 2, 1, 3, 0, 0]

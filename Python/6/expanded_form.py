@@ -12,4 +12,5 @@ def expanded_form(num):
     return ' + '.join(result)
 
 
-print(expanded_form(70304))
+assert expanded_form(1111) == "1000 + 100 + 10 + 1"
+assert expanded_form(70304) == "70000 + 300 + 4"

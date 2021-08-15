@@ -6,11 +6,11 @@ DAY = HOUR * 24
 YEAR = DAY * 365
 
 formats = (
-    (YEAR, 'year'),
-    (DAY, 'day'),
-    (HOUR, 'hour'),
-    (MINUTE, 'minute'),
-    (1, 'second'),
+    (YEAR, "year"),
+    (DAY, "day"),
+    (HOUR, "hour"),
+    (MINUTE, "minute"),
+    (1, "second"),
 )
 
 
@@ -25,4 +25,7 @@ def format_duration(seconds: int) -> str:
             n = int(seconds / period)
             result.append(plural(n, word))
             seconds -= n * period
-    return ' and'.join(', '.join(result).rsplit(',', 1))
+    return " and".join(", ".join(result).rsplit(",", 1))
+
+
+assert format_duration(123456) == "1 day, 10 hours, 17 minutes and 36 seconds"
