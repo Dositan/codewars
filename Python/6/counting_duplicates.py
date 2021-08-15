@@ -1,11 +1,9 @@
+from collections import Counter
+
 
 def duplicate_count(text):
-    duplicates = []
-    for x in text.lower():
-        if (cnt := text.count(x)) > 1:
-            duplicates.append(cnt)
-
-    return 0 if not duplicates else min(duplicates)
+    return sum(1 for x in Counter(text.lower()).values() if x > 1)
 
 
-print(duplicate_count('Indivisibilities'))
+assert duplicate_count('aboba') == 2
+assert duplicate_count('Indivisibilities') == 2
